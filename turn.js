@@ -1,6 +1,6 @@
 
 
-var red = function(err,device){ 
+module.exports.red = function(err,device){ 
   device.callFunction('allLedsOn', 'red', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -10,7 +10,7 @@ var red = function(err,device){
   });
 };
 
-var blue = function(err,device){ 
+module.exports.blue = function(err,device){ 
   device.callFunction('allLedsOn', 'blue', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -20,7 +20,7 @@ var blue = function(err,device){
   });
 };
 
-var green = function(err,device){ 
+module.exports.green = function(err,device){ 
   device.callFunction('allLedsOn', 'green', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -30,7 +30,7 @@ var green = function(err,device){
   });
 };
 
-var white = function(err,device){ 
+module.exports.white = function(err,device){ 
   device.callFunction('allLedsOn', 'white', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -40,7 +40,7 @@ var white = function(err,device){
   });
 };
 
-var rainbow = function(err,device){
+module.exports.rainbow = function(err,device){
   device.callFunction('allLedsOn', 'rainbow', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -50,7 +50,7 @@ var rainbow = function(err,device){
   });
 }
 
-var off = function(err,device){
+module.exports.off = function(err,device){
   device.callFunction('allLedsOff', 'off', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -60,7 +60,7 @@ var off = function(err,device){
   });
 }
 
-var shock = function(err,device){
+module.exports.shock = function(err,device){
   device.callFunction('shockBiff', 'shock', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
@@ -69,11 +69,3 @@ var shock = function(err,device){
     }
   });
 }
-
-module.exports.off = off;
-module.exports.red = red;
-module.exports.blue = blue;
-module.exports.green = green;
-module.exports.white = white;
-module.exports.rainbow = rainbow;
-module.exports.shock = shock;
