@@ -2,11 +2,11 @@
 
 var red = function(err,device){ 
   device.callFunction('allLedsOn', 'red', function(err, data) {
-	  if (err) {
-	    console.log('An error occurred:', err);
+    if (err) {
+      console.log('An error occurred:', err);
 	  } else {
-	    console.log('red rum:', data);
-	  }
+      console.log('red rum:', data);
+    }
 	});
 };
 
@@ -22,7 +22,7 @@ var blue = function(err,device){
 
 
 var rainbow = function(err,device){
-  device.callFunction('allLedsOn', 'rainbow', function(err, data) {
+  device.callFunction('allLedsOn', 'rain', function(err, data) {
 	  if (err) {
 	    console.log('An error occurred:', err);
 	  } else {
