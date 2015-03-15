@@ -16,9 +16,11 @@ spark.login({accessToken: accessToken}).then(
   }
 );
 
-controller.get('/', function (req, res) {
-   res.status(200).sendfile('index.html')
-})
+controller.use(express.static(__dirname + '/public'));
+controller.use(express.static(__dirname + '/bower_components'));
+// controller.get('/', function (req, res) {
+//    res.status(200).sendfile('index.html')
+// })
 
 controller.post('/*', function (req, res) {
 

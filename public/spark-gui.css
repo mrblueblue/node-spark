@@ -1,0 +1,26 @@
+body {
+  font-family: 'Raleway', sans-serif;
+   text-align: center;
+   margin-top: 200px;
+}
+
+div {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 750px;
+}
+
+button {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  color:transparent;
+  text-shadow:none ;
+  border:none ;
+  box-shadow:none;
+  margin: 5px;
+}
+
+#off {
+
+}
