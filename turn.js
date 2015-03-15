@@ -20,9 +20,28 @@ var blue = function(err,device){
   });
 };
 
+var green = function(err,device){ 
+  device.callFunction('allLedsOn', 'green', function(err, data) {
+    if (err) {
+      console.log('An error occurred:', err);
+    } else {
+      console.log('blue moon:', data);
+    }
+  });
+};
+
+var white = function(err,device){ 
+  device.callFunction('allLedsOn', 'white', function(err, data) {
+    if (err) {
+      console.log('An error occurred:', err);
+    } else {
+      console.log('blue moon:', data);
+    }
+  });
+};
 
 var rainbow = function(err,device){
-  device.callFunction('allLedsOn', 'rain', function(err, data) {
+  device.callFunction('allLedsOn', 'rainbow', function(err, data) {
     if (err) {
       console.log('An error occurred:', err);
     } else {
@@ -41,8 +60,9 @@ var off = function(err,device){
   });
 }
 
-
-
+module.exports.off = off;
 module.exports.red = red;
 module.exports.blue = blue;
-module.exports.off = off;
+module.exports.green = green;
+module.exports.white = white;
+module.exports.rainbow = rainbow;
