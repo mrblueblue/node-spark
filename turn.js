@@ -5,7 +5,7 @@ var red = function(err,device){
 	  if (err) {
 	    console.log('An error occurred:', err);
 	  } else {
-	    console.log('Function called succesfully:', data);
+	    console.log('red rum:', data);
 	  }
 	});
 };
@@ -15,7 +15,7 @@ var blue = function(err,device){
 	  if (err) {
 	    console.log('An error occurred:', err);
 	  } else {
-	    console.log('Function called succesfully:', data);
+	    console.log('blue moon:', data);
 	  }
 	});
 };
@@ -25,10 +25,22 @@ var off = function(err,device){
 	  if (err) {
 	    console.log('An error occurred:', err);
 	  } else {
-	    console.log('Function called succesfully:', data);
+	    console.log('off kilter:', data);
 	  }
 	});
 }
+
+var rainbow = function(err,device){
+  device.callFunction('rainbow', 'rainbow', function(err, data) {
+	  if (err) {
+	    console.log('An error occurred:', err);
+	  } else {
+	    console.log('rainbow gathering:', data);
+	  }
+	});
+}
+
+
 
 
 module.exports.red = red;
