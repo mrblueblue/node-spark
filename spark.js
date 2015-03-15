@@ -17,15 +17,13 @@ spark.login({accessToken: accessToken}).then(
 );
 
 controller.get('/', function (req, res) {
-   res.status(200).send('I control the Spark Device')
+   res.status(200).sendfile('index.html')
 })
 
 controller.post('/*', function (req, res) {
 
   var command = req.url.substring(1);
   var isValidFunction = turn.hasOwnProperty(command);
-
-  console.log(turn)
 
   if(isValidFunction) {
     spark.getDevice(deviceId, turn[command])

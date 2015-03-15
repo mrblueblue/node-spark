@@ -1,1 +1,3 @@
-A node.js server that controls a basic Spark device
+A command handler for Spark devices.
+
+Handles commands through a GUI and simple REST calls.
