@@ -52,12 +52,19 @@ button:focus {
 } 
 
 #shock {
-  color: #000;
-  background: #f8f89b;
-  border-color: #f8f89b;
+  color: yellow;
+  background: yellow;
+  border-color: yellow;
+  background-image:url(./shock.gif);)
+  background-repeat:no-repeat;
+  background-size:cover;
+ 
 }
 
 .rainbow {
+  color: black;
+  background: black;
+  border-color: black;
   background-image:url(./nyan.gif);)
   background-repeat:no-repeat;
   background-size:cover;
