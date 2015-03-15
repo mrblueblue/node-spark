@@ -21,6 +21,12 @@ button {
   margin: 5px;
 }
 
+button:focus {
+  border: .25em solid #CCFFFF; /* here configure as your needs */
+  color:#CCFFFF;
+  outline:0;
+}
+
 .red {
   color: #000;
   background: #fcbcbc;
@@ -43,4 +49,16 @@ button {
   color: #000;
   background: #FCFCFC;
   border-color: #FCFCFC;
+} 
+
+#shock {
+  color: #000;
+  background: #f8f89b;
+  border-color: #f8f89b;
+}
+
+.rainbow {
+  background-image:url(./nyan.gif);)
+  background-repeat:no-repeat;
+  background-size:cover;
 }

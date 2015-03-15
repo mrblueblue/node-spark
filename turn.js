@@ -60,9 +60,20 @@ var off = function(err,device){
   });
 }
 
+var shock = function(err,device){
+  device.callFunction('shockBiff', 'shock', function(err, data) {
+    if (err) {
+      console.log('An error occurred:', err);
+    } else {
+      console.log('shock top:', data);
+    }
+  });
+}
+
 module.exports.off = off;
 module.exports.red = red;
 module.exports.blue = blue;
 module.exports.green = green;
 module.exports.white = white;
 module.exports.rainbow = rainbow;
+module.exports.shock = shock;
