@@ -1,11 +1,12 @@
 var spark = require('spark'),
     turn = require('./turn.js'),
     express = require('express'),
-    controller = express(),
+    cors = require('cors'),
+    app = express(),
     server;
 
-var accessToken = process.env.ACCESS_TOKEN || '0fc47112a9191876ff0193170aaf3687b9a28557',
-    deviceId = process.env.DEVICE_ID || '54ff6c066672524821281167';
+var accessToken = process.env.ACCESS_TOKEN,
+    deviceId = process.env.DEVICE_ID;
 
 spark.login({accessToken: accessToken}).then(
   function(token){
@@ -16,14 +17,11 @@ spark.login({accessToken: accessToken}).then(
   }
 );
 
-controller.use(express.static(__dirname + '/public'));
-controller.use(express.static(__dirname + '/bower_components'));
-// controller.get('/', function (req, res) {
-//    res.status(200).sendfile('index.html')
-// })
+app.use(cors());
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/bower_components'));
 
-controller.post('/*', function (req, res) {
-
+app.post('/*', function (req, res) {
   var command = req.url.substring(1);
   var isValidFunction = turn.hasOwnProperty(command);
 
@@ -36,7 +34,7 @@ controller.post('/*', function (req, res) {
   }
 });
 
-server = controller.listen(3000, function () {
+server = app.listen(3000, function () {
   var ip = server.address().address
   var port = server.address().port
   console.log('I control the Spark Device')

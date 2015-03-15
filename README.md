@@ -4,5 +4,5 @@ Handles commands through a GUI and simple REST calls.
 
 ######TODOS
 - armor app for security
-- GUI
+- GUI buildout
 - modularize functions
