@@ -20,6 +20,21 @@ controller.get('/', function (req, res) {
   res.send('I control the Spark Device')
 })
 
+controller.post('/*', function (req, res) {
+
+  var command = req.url.substring(1);
+  var isValidFunction = turn.hasOwnProperty(command);
+
+  if(isValidFunction) {
+    turn.command;
+    res.send('executed command: ', command)
+  } else {
+    console.log('invalid command received')
+    res.send('invalid command. try again')
+  }
+  
+})
+
 server = controller.listen(3000, function () {
   var ip = server.address().address
   var port = server.address().port
