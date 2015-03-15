@@ -21,6 +21,26 @@ button {
   margin: 5px;
 }
 
-#off {
+.red {
+  color: #000;
+  background: #fcbcbc;
+  border-color: #fcbcbc;
+}
 
+.blue {
+  color: #000;
+  background: #bcdffc;
+  border-color: #bcdffc;
+}
+
+.green {
+  color: #000;
+  background: #c7fcbc;
+  border-color: #c7fcbc;
+}
+
+.white {
+  color: #000;
+  background: #FCFCFC;
+  border-color: #FCFCFC;
 }
