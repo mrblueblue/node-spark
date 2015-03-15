@@ -20,6 +20,17 @@ var blue = function(err,device){
 	});
 };
 
+
+var rainbow = function(err,device){
+  device.callFunction('allLedsOn', 'rainbow', function(err, data) {
+	  if (err) {
+	    console.log('An error occurred:', err);
+	  } else {
+	    console.log('rainbow gathering:', data);
+	  }
+	});
+}
+
 var off = function(err,device){
   device.callFunction('allLedsOff', 'off', function(err, data) {
 	  if (err) {
@@ -29,17 +40,6 @@ var off = function(err,device){
 	  }
 	});
 }
-
-var rainbow = function(err,device){
-  device.callFunction('rainbow', 'rainbow', function(err, data) {
-	  if (err) {
-	    console.log('An error occurred:', err);
-	  } else {
-	    console.log('rainbow gathering:', data);
-	  }
-	});
-}
-
 
 
 
