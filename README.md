@@ -2,6 +2,8 @@ A command handler for Spark devices.
 
 Handles commands through a GUI and simple REST calls.
 
+[Example GUI](http://198.11.210.130:3000/)
+
 ######Basic Info
 There are two main js files.
 
