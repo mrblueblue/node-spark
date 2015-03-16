@@ -1,5 +1,5 @@
 
-
+// Modularize exposed functions on Spark device
 module.exports.red = function(err,device){ 
   device.callFunction('allLedsOn', 'red', function(err, data) {
     if (err) {
@@ -25,7 +25,7 @@ module.exports.green = function(err,device){
     if (err) {
       console.log('An error occurred:', err);
     } else {
-      console.log('blue moon:', data);
+      console.log('green bean:', data);
     }
   });
 };
@@ -35,7 +35,7 @@ module.exports.white = function(err,device){
     if (err) {
       console.log('An error occurred:', err);
     } else {
-      console.log('blue moon:', data);
+      console.log('white out:', data);
     }
   });
 };
